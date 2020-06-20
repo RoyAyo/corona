@@ -39,11 +39,12 @@
 
 
 
-  var input = document.getElementById("input") 
+var input = document.getElementById("input") 
 
 //Getting the button then making sure that per click it runs this function
-document.querySelector('#cases').addEventListener("click",function() {
+document.querySelector('#cases').addEventListener("click",function(e) {
   //This if makes sure the input is not empty
+  e.preventDefault();
   if (input.value === "") {
     alert("Input cannot be empty")
   }
